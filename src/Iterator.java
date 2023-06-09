@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class Iterator {
+public interface Iterator {
+    boolean hasNext();
+    Case next();
 }

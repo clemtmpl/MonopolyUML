@@ -1,5 +1,3 @@
-package com.example.monopoly;
-
 public class Terrain extends Propriete {
     private String couleur;
 

@@ -1,5 +1,3 @@
-package com.example.monopoly;
-
 public abstract class Propriete {
     protected String nom;
     protected int prix;

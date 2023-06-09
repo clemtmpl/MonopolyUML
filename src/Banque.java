@@ -1,23 +1,27 @@
-package com.example.monopoly;
-
 public class Banque {
+    private int caisse;
     private static Banque instance;
 
-    private Banque() {
-        // Initialisation de la banque
+    private Banque(int montant) {
+        caisse = montant;
     }
 
-    // Méthode statique pour récupérer l'instance unique de la classe Banque
     public static Banque getInstance() {
         if (instance == null) {
-            synchronized (Banque.class) {
-                if (instance == null) {
-                    instance = new Banque();
-                }
-            }
+            instance = new Banque(2000);
         }
         return instance;
     }
-    public void effectuerTransaction(String compteSource, String compteDestination, double montant) {
+
+    public void encaisser(int montant){
+        caisse += montant;
+    }
+
+    public void decaisser(int montant) {
+        caisse -= montant;
+    }
+
+    public int getCaisse(){
+        return caisse;
     }
 }
